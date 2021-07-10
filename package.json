@@ -1,0 +1,11 @@
+{
+  "name": "earthquake-zen-garden",
+  "version": "1.0.0",
+  "description": "Create react app -without using cra- to list earthquakes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamed Gomaa",
+  "license": "ISC"
+}
