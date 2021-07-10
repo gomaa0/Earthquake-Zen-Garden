@@ -4,8 +4,12 @@
   "description": "Create react app -without using cra- to list earthquakes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "author": "Mohamed Gomaa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
