@@ -4,12 +4,38 @@
   "description": "Create react app -without using cra- to list earthquakes",
   "main": "index.js",
   "scripts": {
-    
+    "start": "parcel src/index.html --open --port 8080",
+    "test:eslint": "eslint src/ --ext .js --ext .jsx",
+    "run:lint-staged": "lint-staged",
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "clean": "rm -rf .cache dist"
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write"
+    ]
   },
   "author": "Mohamed Gomaa",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.3.2",
+    "sass": "^1.35.2"
   }
 }
