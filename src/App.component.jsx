@@ -14,13 +14,17 @@ import {AppContext} from './App.context';
 import './App.styles.scss';
 
 function App() {
-  const {headerProps} = React.useContext(AppContext);
+  const {headerProps, homeProps} = React.useContext(AppContext);
   return (
     <Router>
       <Header {...headerProps} />
       <main>
         <Switch>
-          <Route exact path={ROUTE.Home} render={() => <Home />} />
+          <Route
+            exact
+            path={ROUTE.Home}
+            render={() => <Home {...homeProps} />}
+          />
           <Route exact path={ROUTE.Detail} render={() => <Detail />} />
           <Route exact path={ROUTE.Profile} render={() => <Profile />} />
           {/* Redirect all other links to home */}
