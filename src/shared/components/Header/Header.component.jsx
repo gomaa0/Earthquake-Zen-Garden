@@ -1,22 +1,20 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import ROUTE from '/routes.js';
 import './Header.styles.scss';
-
-export const defaultProps = {
-  title: 'Earthquake Zen Garden',
-  logoImage: 'https://www.realtor.com/realtor-com.png',
-  name: 'Sally',
-};
 
 function Header(props) {
   return (
     <nav className="Header">
-      <a href="">
+      <Link to={ROUTE.Home}>
         <img className="logo-image" src={props.logoImage} />
-      </a>
+      </Link>
+
       <h1 className="title">{props.title}</h1>
-      <a className="profile-nav" href="">
+
+      <Link className="profile-nav" to={ROUTE.Profile}>
         Welcome {props.name}
-      </a>
+      </Link>
     </nav>
   );
 }
