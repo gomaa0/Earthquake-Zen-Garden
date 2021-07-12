@@ -14,9 +14,9 @@ const AppProvider = ({children}) => {
   return (
     <AppContext.Provider
       value={{
-        AppData,
         headerProps,
         homeProps,
+        profile: AppData.profile,
         getFeaturePropertiesById,
       }}
     >

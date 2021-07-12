@@ -14,7 +14,7 @@ import {AppContext} from './App.context';
 import './App.styles.scss';
 
 function App(props) {
-  const {headerProps, homeProps, getFeaturePropertiesById} =
+  const {headerProps, homeProps, getFeaturePropertiesById, profile} =
     React.useContext(AppContext);
   console.log(props);
   return (
@@ -34,7 +34,11 @@ function App(props) {
               <Detail {...getFeaturePropertiesById(match.params.id)} />
             )}
           />
-          <Route exact path={ROUTE.Profile} render={() => <Profile />} />
+          <Route
+            exact
+            path={ROUTE.Profile}
+            render={() => <Profile {...profile} />}
+          />
           {/* Redirect all other links to home */}
           <Route
             path={ROUTE.AllUrlRegex}
