@@ -13,8 +13,10 @@ import Header from './shared/components/Header/Header.component';
 import {AppContext} from './App.context';
 import './App.styles.scss';
 
-function App() {
-  const {headerProps, homeProps} = React.useContext(AppContext);
+function App(props) {
+  const {headerProps, homeProps, getFeaturePropertiesById} =
+    React.useContext(AppContext);
+  console.log(props);
   return (
     <Router>
       <Header {...headerProps} />
@@ -25,7 +27,13 @@ function App() {
             path={ROUTE.Home}
             render={() => <Home {...homeProps} />}
           />
-          <Route exact path={ROUTE.Detail} render={() => <Detail />} />
+          <Route
+            exact
+            path={ROUTE.Detail}
+            render={({match}) => (
+              <Detail {...getFeaturePropertiesById(match.params.id)} />
+            )}
+          />
           <Route exact path={ROUTE.Profile} render={() => <Profile />} />
           {/* Redirect all other links to home */}
           <Route
