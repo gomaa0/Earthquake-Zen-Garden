@@ -1,3 +1,4 @@
+@import '/shared/styles/mixins/mediaQueries.mixin.styles.scss';
 .Header {
   height: 50px;
   width: 100%;
@@ -13,5 +14,11 @@
 
   .title {
     color: #777777;
+  }
+
+  @include mobile {
+    .profile-nav {
+      font-size: 3.3vw;
+    }
   }
 }

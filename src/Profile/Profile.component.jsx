@@ -2,29 +2,21 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import LabelText from '/shared/components/LabelText/LabelText.component';
+import './Profile.styles.scss';
 
 function Profile(props) {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" className="Profile">
       <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
-        style={{padding: '0 20px'}}
+        className="profile-container"
       >
         <h5>Profile</h5>
 
-        <Grid
-          container
-          direction="row"
-          style={{
-            fontSize: '0.8em',
-            lineHeight: '1.2em',
-            flexWrap: 'nowrap',
-            transform: 'translateX(100px)',
-          }}
-        >
+        <Grid container direction="row" className="profile-content-container">
           <img
             src={props.avatarImage}
             style={{height: '100px', marginRight: '10px'}}

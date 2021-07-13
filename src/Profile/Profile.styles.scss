@@ -1,0 +1,25 @@
+@import '/shared/styles/mixins/mediaQueries.mixin.styles.scss';
+
+.Profile {
+  .profile-container {
+    padding: 0 20px;
+    overflow: hidden;
+    @include mobile-h {
+      padding: 0 !important;
+    }
+    .profile-content-container {
+      font-size: 0.8em;
+      line-height: 1.2em;
+      flex-wrap: nowrap;
+      // following is a hack to match design
+      transform: translateX(100px);
+      overflow: hidden;
+      @include mobile-h {
+        transform: translateX(20%);
+      }
+      @include mobile {
+        transform: translateX(10%);
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ function LabelText(props) {
       >
         {props.label}
       </Grid>
-      <Grid item xs={props.valueSpan ?? 8}>
+      <Grid item xs={8} sm={props.valueSpan ?? 8}>
         {props.value}
       </Grid>
     </Grid>
