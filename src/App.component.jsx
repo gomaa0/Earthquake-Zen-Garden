@@ -16,6 +16,7 @@ import './App.styles.scss';
 function App() {
   const {headerProps, homeProps, getFeaturePropertiesById, profile} =
     React.useContext(AppContext);
+
   return (
     <Router>
       <Header {...headerProps} />
