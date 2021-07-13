@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html --open --port 8080",
+    "build": "parcel build src/index.html --public-url .",
     "test:eslint": "eslint src/ --ext .js --ext .jsx",
     "run:lint-staged": "lint-staged",
     "lint": "eslint .",
     "prepare": "husky install",
-    "clean": "rm -rf .cache dist"
+    "clean": "rimraf .cache dist",
+    "clean-hard": "npm run clean && rimraf node_modules"
   },
   "lint-staged": {
     "*.+(js|jsx)": [
@@ -42,6 +44,7 @@
     "lint-staged": "^11.0.0",
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.35.2"
   }
 }
