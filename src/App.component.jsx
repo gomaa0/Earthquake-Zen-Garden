@@ -13,10 +13,9 @@ import Header from './shared/components/Header/Header.component';
 import {AppContext} from './App.context';
 import './App.styles.scss';
 
-function App(props) {
+function App() {
   const {headerProps, homeProps, getFeaturePropertiesById, profile} =
     React.useContext(AppContext);
-  console.log(props);
   return (
     <Router>
       <Header {...headerProps} />
