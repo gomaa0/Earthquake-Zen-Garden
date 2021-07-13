@@ -1,4 +1,5 @@
-.App {
-  height: 100vh;
-  width: 100vw;
+@use 'Src/shared/styles/main.scss';
+
+main {
+  color: #444444;
 }

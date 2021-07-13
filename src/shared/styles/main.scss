@@ -1,0 +1,18 @@
+@import './mixins/mediaQueries.mixin.styles.scss';
+
+a {
+  color: #0011bb;
+}
+
+a:visited {
+  color: #6600cc;
+}
+
+@include mobile {
+  .title {
+    font-size: 4.3vw;
+  }
+  .sub-title {
+    font-size: 3.3vw;
+  }
+}

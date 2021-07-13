@@ -1,0 +1,24 @@
+@import 'Src/shared/styles/mixins/mediaQueries.mixin.styles.scss';
+.Header {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-image {
+    height: 60%;
+  }
+
+  .title {
+    color: #777777;
+  }
+
+  @include mobile {
+    .profile-nav {
+      font-size: 3.3vw;
+    }
+  }
+}
