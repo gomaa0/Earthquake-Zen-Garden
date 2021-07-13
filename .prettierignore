@@ -4,3 +4,4 @@ dist
 coverage
 public
 .docz
+*.md
