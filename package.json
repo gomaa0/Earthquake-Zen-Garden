@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create react app -without using cra- to list earthquakes",
   "main": "index.js",
+  "homepage": "https://unruffled-yalow-bc0888.netlify.app/",
   "scripts": {
     "start": "parcel src/index.html --open --port 8080",
     "build": "parcel build src/index.html --public-url .",
